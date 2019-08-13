@@ -10,8 +10,7 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    puts "\n EEEEE BOIIIIIIIII \n" if params[:user]['email'].to_s == "a@a"
-    super
+    super if params[:user]['email'].to_s == "a@a"
   end
 
   # DELETE /resource/sign_out
